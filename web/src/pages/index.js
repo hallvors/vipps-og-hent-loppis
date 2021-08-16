@@ -26,7 +26,7 @@ export const query = graphql`
       edges {
         node {
           id
-          images[] {
+          [images {
             crop {
               _key
               _type
@@ -47,7 +47,7 @@ export const query = graphql`
               _id
             }
             alt
-          }
+          }]
           title
           _rawExcerpt
           slug {

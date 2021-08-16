@@ -19,12 +19,12 @@ export const query = graphql`
       edges {
         node {
           id
-          images[] {
+          [images {
             asset {
               _id
             }
             alt
-          }
+          }]
           title
           _rawExcerpt
           slug {

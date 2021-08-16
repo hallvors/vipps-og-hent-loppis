@@ -22,7 +22,7 @@ export const query = graphql`
           current
         }
       }
-      images[] {
+      [images {
         crop {
           _key
           _type
@@ -43,7 +43,7 @@ export const query = graphql`
           _id
         }
         alt
-      }
+      }]
       title
       slug {
         current
