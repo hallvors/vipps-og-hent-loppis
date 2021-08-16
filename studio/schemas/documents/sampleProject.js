@@ -37,6 +37,12 @@ export default {
         maxLength: 96
       }
     },
+   {
+      name: 'publishedAt',
+      title: 'Published at',
+      description: 'You can use this field to schedule projects where you show them',
+      type: 'datetime'
+    },
   ],
   preview: {
     select: {
@@ -55,4 +61,7 @@ export default {
       }
     }
   }
+  initialValue: () => ({
+    publishedAt: (new Date()).toISOString()
+  })
 }
