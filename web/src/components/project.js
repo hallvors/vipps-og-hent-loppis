@@ -10,18 +10,18 @@ import RoleList from "./role-list";
 import * as styles from "./project.module.css";
 
 function Project(props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props;
+  const { _rawBody, title, categories, images, members, publishedAt, relatedProjects } = props;
   return (
     <article className={styles.root}>
-      {props.mainImage && mainImage.asset && (
+      {props.images && images[0] && images[0].asset && (
         <div className={styles.mainImage}>
           <img
-            src={imageUrlFor(buildImageObj(mainImage))
+            src={imageUrlFor(buildImageObj(images[0]))
               .width(1200)
               .height(Math.floor((9 / 16) * 1200))
               .fit("crop")
               .url()}
-            alt={mainImage.alt}
+            alt={images[0].alt}
           />
         </div>
       )}

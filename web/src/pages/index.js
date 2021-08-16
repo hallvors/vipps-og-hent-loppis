@@ -26,7 +26,7 @@ export const query = graphql`
       edges {
         node {
           id
-          mainImage {
+          images[] {
             crop {
               _key
               _type

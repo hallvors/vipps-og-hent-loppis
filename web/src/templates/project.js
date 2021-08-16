@@ -22,7 +22,7 @@ export const query = graphql`
           current
         }
       }
-      mainImage {
+      images[] {
         crop {
           _key
           _type
